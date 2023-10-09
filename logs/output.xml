@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20231009 06:18:48.336" rpa="false" schemaversion="4">
+<suite id="s1" name="Amazon Teste" source="C:\Users\Gabriel\Desktop\WebTesting\amazon_teste.robot">
+<test id="s1-t1" name="Caso de Teste 1 - Fazer algumas buscas no site da Amazon" line="8">
+<kw name="Abrir o navegador" library="amazon_teste_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231009 06:18:48.778" level="INFO">Opening browser 'headlesschrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20231009 06:18:48.778" endtime="20231009 06:18:52.238"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231009 06:18:52.239" endtime="20231009 06:18:52.361"/>
+</kw>
+<status status="PASS" starttime="20231009 06:18:48.777" endtime="20231009 06:18:52.361"/>
+</kw>
+<kw name="Dado que estou na page &quot;Eletrônicos&quot; da Amazon" library="amazon_teste_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231009 06:18:52.363" level="INFO">Opening url 'https://www.amazon.com.br/Eletronicos-e-Tecnologia/b/?ie=UTF8&amp;node=16209062011&amp;ref_=nav_cs_electronics'</msg>
+<status status="PASS" starttime="20231009 06:18:52.363" endtime="20231009 06:18:55.893"/>
+</kw>
+<status status="PASS" starttime="20231009 06:18:52.362" endtime="20231009 06:18:55.893"/>
+</kw>
+<kw name="E o texto &quot;Eletrônicos e Tecnologia&quot; deve ser exibido na página" library="amazon_teste_resources">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>text=${TEXTO_ELETONICO_E_TECNOLOGIA}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<msg timestamp="20231009 06:18:56.083" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.149)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6FA0B7D12+55474]
+	(No symbol) [0x00007FF6FA0277C2]
+	(No symbol) [0x00007FF6F9EDE0EB]
+	(No symbol) [0x00007FF6F9EBE528]
+	(No symbol) [0x00007FF6F9F43B77]
+	(No symbol) [0x00007FF6F9F575BF]
+	(No symbol) [0x00007FF6F9F3EF33]
+	(No symbol) [0x00007FF6F9F13D41]
+	(No symbol) [0x00007FF6F9F14F84]
+	GetHandleVerifier [0x00007FF6FA41B762+3609346]
+	GetHandleVerifier [0x00007FF6FA471A80+3962400]
+	GetHandleVerifier [0x00007FF6FA469F0F+3930799]
+	GetHandleVerifier [0x00007FF6FA153CA6+694342]
+	(No symbol) [0x00007FF6FA032218]
+	(No symbol) [0x00007FF6FA02E484]
+	(No symbol) [0x00007FF6FA02E5B2]
+	(No symbol) [0x00007FF6FA01EE13]
+	BaseThreadInitThunk [0x00007FFFCBE27344+20]
+	RtlUserThreadStart [0x00007FFFCDB026B1+33]
+</msg>
+<msg timestamp="20231009 06:18:56.277" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.149)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6FA0B7D12+55474]
+	(No symbol) [0x00007FF6FA0277C2]
+	(No symbol) [0x00007FF6F9EDE0EB]
+	(No symbol) [0x00007FF6F9EBE528]
+	(No symbol) [0x00007FF6F9F43B77]
+	(No symbol) [0x00007FF6F9F575BF]
+	(No symbol) [0x00007FF6F9F3EF33]
+	(No symbol) [0x00007FF6F9F13D41]
+	(No symbol) [0x00007FF6F9F14F84]
+	GetHandleVerifier [0x00007FF6FA41B762+3609346]
+	GetHandleVerifier [0x00007FF6FA471A80+3962400]
+	GetHandleVerifier [0x00007FF6FA469F0F+3930799]
+	GetHandleVerifier [0x00007FF6FA153CA6+694342]
+	(No symbol) [0x00007FF6FA032218]
+	(No symbol) [0x00007FF6FA02E484]
+	(No symbol) [0x00007FF6FA02E5B2]
+	(No symbol) [0x00007FF6FA01EE13]
+	BaseThreadInitThunk [0x00007FFFCBE27344+20]
+	RtlUserThreadStart [0x00007FFFCDB026B1+33]
+</msg>
+<status status="FAIL" starttime="20231009 06:18:55.905" endtime="20231009 06:18:56.294"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>text=${TEXTO_ELETONICO_E_TECNOLOGIA}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" starttime="20231009 06:18:56.295" endtime="20231009 06:18:56.295"/>
+</kw>
+<status status="FAIL" starttime="20231009 06:18:55.901" endtime="20231009 06:18:56.296"/>
+</kw>
+<kw name="E o título da página deve ficar &quot;Eletrônicos e Tecnologia | Amazon.com.br&quot;" library="amazon_teste_resources">
+<status status="NOT RUN" starttime="20231009 06:18:56.341" endtime="20231009 06:18:56.341"/>
+</kw>
+<kw name="E a categoria &quot;Computadores e Informática&quot; deve ser exibida na página" library="amazon_teste_resources">
+<status status="NOT RUN" starttime="20231009 06:18:56.343" endtime="20231009 06:18:56.343"/>
+</kw>
+<kw name="Quando clicar na categoria &quot;Computadores e Informática&quot; E o memu Navegue por Categoria deve ser apresentado e a opção Notebooks tem que ser selecionado" library="amazon_teste_resources">
+<status status="NOT RUN" starttime="20231009 06:18:56.344" endtime="20231009 06:18:56.344"/>
+</kw>
+<kw name="E após ser selecionado dentro do menu Sistema Operacional o checkbox Windows 11 Pro tem que ser marcado" library="amazon_teste_resources">
+<status status="NOT RUN" starttime="20231009 06:18:56.345" endtime="20231009 06:18:56.351"/>
+</kw>
+<kw name="E no campo de texto preço deve digitar o valor 1500 para o Min e 2000 para o Max e clicar no botão ir" library="amazon_teste_resources">
+<status status="NOT RUN" starttime="20231009 06:18:56.362" endtime="20231009 06:18:56.362"/>
+</kw>
+<kw name="Quando a página Resultados for carregada" library="amazon_teste_resources">
+<status status="NOT RUN" starttime="20231009 06:18:56.368" endtime="20231009 06:18:56.368"/>
+</kw>
+<kw name="Então tem que clicar no ícone amazon prime .com.br no canto superior esquerdo e ser direcionado para a home da Amazon" library="amazon_teste_resources">
+<status status="NOT RUN" starttime="20231009 06:18:56.369" endtime="20231009 06:18:56.370"/>
+</kw>
+<kw name="Quanddo estiver na home fazer uma pesquisa pelo o produto &quot;alexia 5a geração&quot;" library="amazon_teste_resources">
+<status status="NOT RUN" starttime="20231009 06:18:56.372" endtime="20231009 06:18:56.372"/>
+</kw>
+<kw name="Então após a pesquisa ser feita voltar novamente para a tela home da Amazon e fechar o navegador" library="amazon_teste_resources">
+<status status="NOT RUN" starttime="20231009 06:18:56.373" endtime="20231009 06:18:56.373"/>
+</kw>
+<kw name="Fehar o navegador" library="amazon_teste_resources" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231009 06:18:58.380" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231009 06:18:56.380" endtime="20231009 06:18:58.380"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231009 06:18:58.380" endtime="20231009 06:19:00.528"/>
+</kw>
+<status status="PASS" starttime="20231009 06:18:56.379" endtime="20231009 06:19:00.528"/>
+</kw>
+<doc>Esse teste verifica o menu eletronicos do site da Amazon,
+e tem que selecionar a categotia Computadores e Informática,
+pesquisar por notebooks que seja Windows 11 Pro,
+digitando o valor de preço entre 1500 para o Min e 2000 para o Max,
+após a pesquisa ser feita, voltar para a home,
+e fazer uma nova pesquisa, dentro do campo Pesquisa Amazon por alexia 5a geração,
+após a pesquisa ser feita voltar novamente para a home e fechar o navegador</doc>
+<tag>buscas</tag>
+<status status="FAIL" starttime="20231009 06:18:48.775" endtime="20231009 06:19:00.529">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.149)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6FA0B7D12+55474]
+	(No symbol) [0x00007FF6FA0277C2]
+	(No symbol) [0x00007FF6F9EDE0EB]
+	(No symbol) [0x00007FF6F9EBE528]
+	(No symbol) [0x00007FF6F9F43B77]
+	(No symbol) [0x00007FF6F9F575BF]
+	(No symbol) [0x00007FF6F9F3EF33]
+	(No symbol) [0x00007FF6F9F13D41]
+	(No symbol) [0x00007FF6F9F14F84]
+	GetHandleVerifier [0x00007FF6FA41B762+3609346]
+	GetHandleVerifier [0x00007FF6FA471A80+3962400]
+	GetHandleVerifier [0x00007FF6FA469F0F+3930799]
+	GetHandleVerifier [0x00007FF6FA153CA6+694342]
+	(No symbol) [0x00007FF6FA032218]
+	(No symbol) [0x00007FF6FA02E484]
+	(No symbol) [0x00007FF6FA02E5B2]
+	(No symbol) [0x00007FF6FA01EE13]
+	BaseThreadInitThunk [0x00007FFFCBE27344+20]
+	RtlUserThreadStart [0x00007FFFCDB026B1+33]
+</status>
+</test>
+<doc>Essa suite de teste vai realizar testes no site da Amazon</doc>
+<status status="FAIL" starttime="20231009 06:18:48.341" endtime="20231009 06:19:00.535"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">buscas</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Amazon Teste">Amazon Teste</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20231009 06:18:56.083" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.149)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6FA0B7D12+55474]
+	(No symbol) [0x00007FF6FA0277C2]
+	(No symbol) [0x00007FF6F9EDE0EB]
+	(No symbol) [0x00007FF6F9EBE528]
+	(No symbol) [0x00007FF6F9F43B77]
+	(No symbol) [0x00007FF6F9F575BF]
+	(No symbol) [0x00007FF6F9F3EF33]
+	(No symbol) [0x00007FF6F9F13D41]
+	(No symbol) [0x00007FF6F9F14F84]
+	GetHandleVerifier [0x00007FF6FA41B762+3609346]
+	GetHandleVerifier [0x00007FF6FA471A80+3962400]
+	GetHandleVerifier [0x00007FF6FA469F0F+3930799]
+	GetHandleVerifier [0x00007FF6FA153CA6+694342]
+	(No symbol) [0x00007FF6FA032218]
+	(No symbol) [0x00007FF6FA02E484]
+	(No symbol) [0x00007FF6FA02E5B2]
+	(No symbol) [0x00007FF6FA01EE13]
+	BaseThreadInitThunk [0x00007FFFCBE27344+20]
+	RtlUserThreadStart [0x00007FFFCDB026B1+33]
+</msg>
+</errors>
+</robot>
